@@ -1,0 +1,231 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --primary-color: #6366f1;
+    --primary-dark: #4f46e5;
+    --secondary-color: #10b981;
+    --text-primary: #1e293b;
+    --text-secondary: #64748b;
+    --bg-primary: #f8fafc;
+    --bg-secondary: #ffffff;
+    --border-radius: 12px;
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.1);
+    --shadow-md: 0 4px 6px rgba(100, 116, 139, 0.12);
+    --shadow-lg: 0 10px 15px rgba(100, 116, 139, 0.15);
+}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    width: 450px;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+header {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 8px;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-icon {
+    font-size: 24px;
+    color: var(--primary-color);
+}
+
+h1 {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0;
+    color: var(--text-primary);
+}
+
+.domain-info {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    background-color: var(--bg-secondary);
+    padding: 10px 14px;
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-sm);
+}
+
+.domain-label {
+    font-size: 14px;
+    color: var(--text-secondary);
+}
+
+#current-domain {
+    font-weight: 500;
+    color: var(--primary-color);
+}
+
+button {
+    width: 100%;
+    padding: 14px;
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: var(--border-radius);
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 10px;
+    transition: all 0.2s ease;
+    box-shadow: var(--shadow-md);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+}
+
+button:hover {
+    background: var(--primary-dark);
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-lg);
+}
+
+.results-container {
+    background-color: var(--bg-secondary);
+    border-radius: var(--border-radius);
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+li {
+    position: relative;
+    background-color: var(--bg-secondary);
+    margin-bottom: 1px;
+    border-left: 3px solid var(--primary-color);
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+}
+
+li:hover {
+    background-color: rgba(99, 102, 241, 0.05);
+}
+
+li .link-item {
+    display: flex;
+    width: 100%;
+    padding: 0;
+}
+
+a {
+    flex-grow: 1;
+    display: block;
+    padding: 14px;
+    text-decoration: none;
+    color: var(--text-primary);
+    font-size: 14px;
+    word-break: break-all;
+}
+
+.copy-btn {
+    background: none;
+    border: none;
+    color: var(--text-secondary);
+    cursor: pointer;
+    padding: 8px;
+    margin: 0;
+    box-shadow: none;
+    width: auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.2s ease;
+}
+
+.copy-btn:hover {
+    color: var(--primary-color);
+    background: none;
+    transform: none;
+    box-shadow: none;
+}
+
+.copy-btn i {
+    font-size: 16px;
+}
+
+li:last-child {
+    margin-bottom: 0;
+    border-bottom: none;
+}
+
+.footer-text {
+    font-size: 12px;
+    color: var(--text-secondary);
+    text-align: center;
+    margin: 10px 0 0 0;
+}
+
+/* Tooltip styles */
+.tooltip {
+    position: relative;
+    display: inline-block;
+}
+
+.tooltip .tooltiptext {
+    visibility: hidden;
+    width: 80px;
+    background-color: var(--text-primary);
+    color: #fff;
+    text-align: center;
+    border-radius: 6px;
+    padding: 5px;
+    position: absolute;
+    z-index: 1;
+    bottom: 125%;
+    left: 50%;
+    margin-left: -40px;
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 12px;
+}
+
+.tooltip:hover .tooltiptext {
+    visibility: visible;
+    opacity: 1;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bg-primary);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--text-secondary);
+    border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--primary-color);
+}

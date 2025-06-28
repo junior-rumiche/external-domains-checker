@@ -1,0 +1,38 @@
+<svg width="48" height="48" viewBox="0 0 48 48" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <!-- Definición del nuevo gradiente "Fusión Aurora" -->
+  <defs>
+    <linearGradient id="aurora-gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F7971E" />
+      <stop offset="50%" stop-color="#FFD200" />
+      <stop offset="100%" stop-color="#E03E69" />
+    </linearGradient>
+    <linearGradient id="aurora-gradient-2" x1="1" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#833ab4"/>
+      <stop offset="50%" stop-color="#fd1d1d"/>
+      <stop offset="100%" stop-color="#fcb045"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Fondo con el nuevo gradiente vibrante -->
+  <rect width="48" height="48" rx="10" fill="url(#aurora-gradient-2)"/>
+
+  <!-- Escudo de cristal refinado para mayor contraste -->
+  <g>
+    <!-- Sombra sutil para dar profundidad al escudo -->
+    <path d="M24 6L8 14V28C8 35.732 15.0751 42.1411 24 44C32.9249 42.1411 40 35.732 40 28V14L24 6Z" fill="black" fill-opacity="0.15" style="transform: translate(1px, 2px); filter: blur(2px);"/>
+
+    <!-- Cuerpo del escudo con efecto de vidrio -->
+    <path d="M24 6L8 14V28C8 35.732 15.0751 42.1411 24 44C32.9249 42.1411 40 35.732 40 28V14L24 6Z"
+          fill="rgba(255, 255, 255, 0.25)"
+          stroke="rgba(255, 255, 255, 0.7)"
+          stroke-width="2"/>
+
+    <!-- Icono de flecha de "enlace externo" con más impacto -->
+    <path d="M22 18 L34 18 M30 14 L34 18 L30 22"
+          stroke-width="3" stroke="#FFFFFF" stroke-linecap="round" stroke-linejoin="round"
+          style="filter: drop-shadow(0px 1px 1px rgba(0,0,0,0.4));"/>
+          
+    <path d="M16 34 L28 34"
+          stroke-width="3" stroke="#FFFFFF" stroke-opacity="0.6" stroke-linecap="round" stroke-linejoin="round"/>
+  </g>
+</svg>

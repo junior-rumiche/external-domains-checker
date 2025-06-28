@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>External Links Checker</title>
+    <link rel="stylesheet" href="popup.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body>
+    <div class="container">
+        <header>
+            <div class="logo-container">
+                <i class="fas fa-link logo-icon"></i>
+                <h1>External Links Finder</h1>
+            </div>
+            <div class="domain-info">
+                <span class="domain-label">Current Domain:</span>
+                <strong id="current-domain"></strong>
+            </div>
+        </header>
+        <main>
+            <button id="check-links-btn">
+                <i class="fas fa-search"></i> Scan for External Links
+            </button>
+            <div class="results-container">
+                <ul id="links-list"></ul>
+            </div>
+        </main>
+        <footer>
+            <p class="footer-text">Find all external links on the current page</p>
+        </footer>
+    </div>
+    <script src="popup.js"></script>
+</body>
+
+</html>
