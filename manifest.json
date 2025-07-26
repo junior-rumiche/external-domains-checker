@@ -1,14 +1,14 @@
 {
-    "manifest_version": 2,
+    "manifest_version": 3,
     "name": "External Domain-Checker",
     "version": "1.0",
     "author": "Junior Rumiche",
     "description": "Checks for links on the current tab that do not belong to the domain you are visiting and displays them with a modern design.",
     "permissions": [
         "activeTab",
-        "<all_urls>"
+        "scripting"
     ],
-    "browser_action": {
+    "action": {
         "default_icon": "icons/icon-48.svg",
         "default_popup": "src/popup/popup.html",
         "default_title": "External Links"
@@ -26,10 +26,5 @@
     "icons": {
         "48": "icons/icon-48.svg",
         "96": "icons/icon-96.svg"
-    },
-    "browser_specific_settings": {
-        "gecko": {
-            "id": "external-domain-checker@junior.com"
-        }
     }
 }

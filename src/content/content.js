@@ -1,16 +1,23 @@
-(function () {
-    const current_domain = window.location.hostname;
-    const all_links = Array.from(document.querySelectorAll('a'));
+(() => {
+    /**
+     * @returns {Array<string>} - An array of external link URLs.
+     */
+    const getExternalLinks = () => {
+        const currentHostname = window.location.hostname;
+        const allLinks = Array.from(document.querySelectorAll('a'));
 
+        return allLinks
+            .map(link => link.href)
+            .filter(href => {
+                try {
+                    const linkHostname = new URL(href).hostname;
+                    return linkHostname !== currentHostname && linkHostname !== '';
+                } catch (error) {
+                    // Ignore invalid URLs.
+                    return false;
+                }
+            });
+    };
 
-    const external_links = all_links.filter(link => {
-        try {
-            const link_hostname = new URL(link.href).hostname;
-            return link_hostname !== current_domain && link_hostname !== '';
-        } catch (e) {
-            return false;
-        }
-    });
-
-    return external_links.map(link => link.href);
+    return getExternalLinks();
 })();
